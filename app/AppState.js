@@ -14,6 +14,7 @@ class ObservableAppState extends EventEmitter {
     new Character('mick', '👮‍♂️', 1000, 'strongest meter maid'),
     new Character('jake', '🫅', 10000, 'code emperor'),
     new Character('sam', '🧘‍♀️', 8, 'stretchy'),
+    new Character('frank', '🐈‍⬛', 9, 'unemployed'),
   ]
 }
 

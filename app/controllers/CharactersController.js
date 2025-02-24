@@ -4,14 +4,40 @@ import { AppState } from "../AppState.js";
 export class CharactersController {
   // NOTE will run when CharactersController class is constructed (happens in App class)
   constructor() {
+    // NOTE our controller constructors generally run on page load
     console.log('You just created a new Characters Controller!');
     console.log('Great job buddy!');
     const characters = AppState.characters
     console.log('these are the characters from the appstate', characters);
+    this.drawCharacterCards()
   }
 
   sayWhatUp() {
     let name = 'jerms'
     console.log('What up ' + name);
+  }
+
+  drawCharacterCards() {
+    const characters = AppState.characters
+
+    let innerHTMLcontent = ''
+
+    for (let i = 0; i < characters.length; i++) {
+      const character = characters[i];
+      innerHTMLcontent += `
+      <div class="col-md-4">
+      <div class="bg-light shadow text-center p-4 mb-3">
+      <span class="display-1">${character.emoji}</span>
+      <p class="fs-2">${character.name}</p>
+      <p class="fs-4">Delivery boy</p>
+      <p class="fs-4">10/10</p>
+      <button class="btn btn-danger">-</button>
+      <button class="btn btn-success">+</button>
+      </div>
+      </div>
+      `
+    }
+    const characterCardsElem = document.getElementById('charcterCardsSection')
+    characterCardsElem.innerHTML = innerHTMLcontent
   }
 }
