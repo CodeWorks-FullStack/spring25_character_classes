@@ -1,4 +1,5 @@
 import { AppState } from "../AppState.js";
+import { charactersService } from "../services/CharactersService.js";
 
 // NOTE the user only has access to what is defined on our Controller classes
 export class CharactersController {
@@ -32,5 +33,6 @@ export class CharactersController {
 
   makeHealthGoUp() {
     console.log('health is going up!');
+    charactersService.increaseCharacterHealth()
   }
 }
