@@ -4,8 +4,11 @@ import { Pop } from "../utils/Pop.js"
 
 // NOTE export allows other modules (js files) to access the exported value
 export class ExampleController {
+  // NOTE a constructor runs whenever a class object is created (constructed, newed up)
   constructor() {
     console.log('👋Hello from ExampleController')
+    console.log('Constructor is running!');
+
     this.drawMVCard()
   }
 
@@ -16,7 +19,7 @@ export class ExampleController {
     <div class="card text-center shadow p-2">
       <div class="card-header fw-bold">MVC Template</div>
       <div class="card-body fs-3">
-        <i class="mdi mdi-file-document text-blue"></i>
+        <i class="mdi mdi-cat text-blue"></i>
         <i class="mdi mdi-arrow-right fs-6"></i>
         <i class="mdi mdi-code-block-braces text-teal"></i>
         <i class="mdi mdi-arrow-right fs-6"></i>

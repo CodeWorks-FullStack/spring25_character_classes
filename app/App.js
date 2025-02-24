@@ -4,7 +4,6 @@ import whyWouldIDoThis, { name, num } from './ExportExample.js';
 
 const numberFromOtherModule = num
 const nameFromOtherMidule = name
-
 const thisIsWeird = whyWouldIDoThis
 
 class App {
