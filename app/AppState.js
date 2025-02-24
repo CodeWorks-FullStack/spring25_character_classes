@@ -1,3 +1,5 @@
+// NOTE try to let your tab-complete write these import statements for you
+import { Character } from './models/Character.js'
 import { EventEmitter } from './utils/EventEmitter.js'
 import { createObservableProxy } from './utils/ObservableProxy.js'
 
@@ -8,6 +10,7 @@ class ObservableAppState extends EventEmitter {
   examples = []
 
   characters = [
+    new Character('jerms')
   ]
 }
 

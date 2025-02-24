@@ -1,3 +1,4 @@
+import { AppState } from "../AppState.js";
 
 // NOTE the user only has access to what is defined on our Controller classes
 export class CharactersController {
@@ -5,6 +6,8 @@ export class CharactersController {
   constructor() {
     console.log('You just created a new Characters Controller!');
     console.log('Great job buddy!');
+    const characters = AppState.characters
+    console.log('these are the characters from the appstate', characters);
   }
 
   sayWhatUp() {
