@@ -36,4 +36,9 @@ export class CharactersController {
     charactersService.increaseCharacterHealth(characterName)
     this.drawCharacterCards()
   }
+
+  makeHealthGoDown(characterName) {
+    charactersService.decreaseCharacterHealth(characterName)
+    this.drawCharacterCards()
+  }
 }

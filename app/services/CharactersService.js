@@ -9,6 +9,13 @@ class CharactersService {
     foundCharacter.currentHealth++
     console.log('here they are!', foundCharacter);
   }
+
+  decreaseCharacterHealth(characterName) {
+    const characters = AppState.characters
+    const foundCharacter = characters.find(character => character.name == characterName)
+    foundCharacter.currentHealth--
+  }
+
 }
 
 // NOTE singleton (you only create a single instance of a class that all other modules interact with)

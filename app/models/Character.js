@@ -23,7 +23,9 @@ export class Character {
       <p class="fs-2">${this.name}</p>
       <p class="fs-4">${this.job}</p>
       <p class="fs-4">${this.currentHealth}/${this.maxHealth}</p>
-      <button class="btn btn-danger">-</button>
+      <button onclick="app.charactersController.makeHealthGoDown('${this.name}')" class="btn btn-danger">
+        -
+      </button>
       <button onclick="app.charactersController.makeHealthGoUp('${this.name}')" class="btn btn-success">
         +
       </button>
