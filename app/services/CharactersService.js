@@ -4,8 +4,10 @@ import { AppState } from "../AppState.js";
 class CharactersService {
   increaseCharacterHealth(characterName) {
     console.log('character health is going up!', characterName);
-    console.log('here are all of the characters', AppState.characters);
-
+    const characters = AppState.characters
+    const foundCharacter = characters.find(character => character.name == characterName)
+    foundCharacter.currentHealth++
+    console.log('here they are!', foundCharacter);
   }
 }
 
