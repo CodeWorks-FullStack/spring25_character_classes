@@ -20,8 +20,8 @@ export class Character {
       <div class="bg-light shadow text-center p-4 mb-3">
       <span class="display-1">${this.emoji}</span>
       <p class="fs-2">${this.name}</p>
-      <p class="fs-4">Delivery boy</p>
-      <p class="fs-4">10/10</p>
+      <p class="fs-4">${this.job}</p>
+      <p class="fs-4">${this.currentHealth}/${this.maxHealth}</p>
       <button class="btn btn-danger">-</button>
       <button class="btn btn-success">+</button>
       </div>
