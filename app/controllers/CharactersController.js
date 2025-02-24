@@ -25,7 +25,7 @@ export class CharactersController {
 
     for (let i = 0; i < characters.length; i++) {
       const character = characters[i];
-      innerHTMLcontent += character.cardHTMLTemplate()
+      innerHTMLcontent += character.cardHTMLTemplate
     }
     const characterCardsElem = document.getElementById('charcterCardsSection')
     characterCardsElem.innerHTML = innerHTMLcontent

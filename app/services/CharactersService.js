@@ -8,12 +8,18 @@ class CharactersService {
     const foundCharacter = characters.find(character => character.name == characterName)
     foundCharacter.currentHealth++
     console.log('here they are!', foundCharacter);
+    if (foundCharacter.currentHealth > foundCharacter.maxHealth) {
+      foundCharacter.currentHealth = foundCharacter.maxHealth
+    }
   }
 
   decreaseCharacterHealth(characterName) {
     const characters = AppState.characters
     const foundCharacter = characters.find(character => character.name == characterName)
     foundCharacter.currentHealth--
+    if (foundCharacter.currentHealth <= 0) {
+      foundCharacter.currentHealth = 0
+    }
   }
 
 }
