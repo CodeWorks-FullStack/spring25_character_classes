@@ -10,7 +10,9 @@ class ObservableAppState extends EventEmitter {
   examples = []
 
   characters = [
-    new Character('jerms')
+    new Character('jerms', '🎅', 10, 'delivery dude'),
+    new Character('mick', '👮‍♂️', 1000, 'strongest meter maid'),
+    new Character('jake', '🫅', 10000, 'code emperor'),
   ]
 }
 
