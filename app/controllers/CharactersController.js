@@ -29,4 +29,8 @@ export class CharactersController {
     const characterCardsElem = document.getElementById('charcterCardsSection')
     characterCardsElem.innerHTML = innerHTMLcontent
   }
+
+  makeHealthGoUp() {
+    console.log('health is going up!');
+  }
 }
