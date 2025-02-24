@@ -34,5 +34,6 @@ export class CharactersController {
   makeHealthGoUp(characterName) {
     console.log('health is going up for ', characterName);
     charactersService.increaseCharacterHealth(characterName)
+    this.drawCharacterCards()
   }
 }
