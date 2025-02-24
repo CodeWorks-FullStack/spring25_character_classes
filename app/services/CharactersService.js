@@ -2,8 +2,8 @@ import { AppState } from "../AppState.js";
 
 // NOTE you should not export your service class definitions
 class CharactersService {
-  increaseCharacterHealth() {
-    console.log('character health is going up!');
+  increaseCharacterHealth(characterName) {
+    console.log('character health is going up!', characterName);
     console.log('here are all of the characters', AppState.characters);
 
   }
