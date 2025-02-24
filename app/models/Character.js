@@ -19,6 +19,10 @@ export class Character {
     return this.currentHealth > 0 // true or false
   }
 
+  get isAtMaxHealth() {
+    return this.currentHealth == this.maxHealth
+  }
+
   get cardHTMLTemplate() {
     // NOTE if you are passing a string value as an argument in your html template, make sure you put '' around the value
     return `
