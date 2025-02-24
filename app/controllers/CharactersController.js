@@ -31,8 +31,8 @@ export class CharactersController {
     characterCardsElem.innerHTML = innerHTMLcontent
   }
 
-  makeHealthGoUp() {
-    console.log('health is going up!');
+  makeHealthGoUp(characterName) {
+    console.log('health is going up for ', characterName);
     charactersService.increaseCharacterHealth()
   }
 }

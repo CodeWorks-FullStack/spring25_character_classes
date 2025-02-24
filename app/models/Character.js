@@ -15,7 +15,8 @@ export class Character {
   isAlive = true
 
   cardHTMLTemplate() {
-    return /*html*/`
+    // NOTE if you are passing a string value as an argument in your html template, make sure you put '' around the value
+    return `
     <div class="col-md-4">
       <div class="bg-light shadow text-center p-4 mb-3">
       <span class="display-1">${this.emoji}</span>
@@ -23,7 +24,9 @@ export class Character {
       <p class="fs-4">${this.job}</p>
       <p class="fs-4">${this.currentHealth}/${this.maxHealth}</p>
       <button class="btn btn-danger">-</button>
-      <button onclick="app.charactersController.makeHealthGoUp()" class="btn btn-success">+</button>
+      <button onclick="app.charactersController.makeHealthGoUp('${this.name}')" class="btn btn-success">
+        +
+      </button>
       </div>
     </div>
     `
