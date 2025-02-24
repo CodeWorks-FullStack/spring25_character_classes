@@ -1,6 +1,7 @@
 import { AppState } from "../AppState.js";
 
 // NOTE you should not export your service class definitions
+// NOTE business logic and modification of data in the AppState should occur in the service layer
 class CharactersService {
   increaseCharacterHealth(characterName) {
     console.log('character health is going up!', characterName);
@@ -17,7 +18,7 @@ class CharactersService {
     const characters = AppState.characters
     const foundCharacter = characters.find(character => character.name == characterName)
     foundCharacter.currentHealth--
-    if (foundCharacter.currentHealth <= 0) {
+    if (foundCharacter.currentHealth < 0) {
       foundCharacter.currentHealth = 0
     }
   }

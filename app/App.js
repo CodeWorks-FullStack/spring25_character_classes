@@ -17,4 +17,5 @@ class App {
   charactersController = new CharactersController()
 }
 
+// App object is made accessible to the DOM
 window['app'] = new App()
