@@ -24,18 +24,7 @@ export class CharactersController {
 
     for (let i = 0; i < characters.length; i++) {
       const character = characters[i];
-      innerHTMLcontent += `
-      <div class="col-md-4">
-      <div class="bg-light shadow text-center p-4 mb-3">
-      <span class="display-1">${character.emoji}</span>
-      <p class="fs-2">${character.name}</p>
-      <p class="fs-4">Delivery boy</p>
-      <p class="fs-4">10/10</p>
-      <button class="btn btn-danger">-</button>
-      <button class="btn btn-success">+</button>
-      </div>
-      </div>
-      `
+      innerHTMLcontent += character.cardHTMLTemplate()
     }
     const characterCardsElem = document.getElementById('charcterCardsSection')
     characterCardsElem.innerHTML = innerHTMLcontent
